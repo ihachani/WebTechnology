@@ -1,8 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 
-<!DOCTYPE produit [
-<!ELEMENT produit((id ,quantite+ ,nom)#REQUIRED)>
-<!ELEMENT nom(#PCDATA)>
+<!ELEMENT produit ( (id ,quantite+ ,nom)#REQUIRED ) >
+<!ELEMENT id (#PCDATA)>
 <!ELEMENT quantite (#PCDATA)>
 <!ELEMENT nom (#PCDATA)>
-]>
