@@ -1,0 +1,34 @@
+@CHARSET "UTF-8";
+
+#main_body_warper{
+	margin-left: 5%;
+	margin-right: 5%;
+	min-width: 50em;
+	padding: 10px;
+	
+}
+
+footer{
+	background-color: #1b71a0;
+	height: 200 px;
+}
+#footer_container{
+	padding: 50px;
+	background-color: black;
+}
+
+#sep{
+	background-color: #2986b9;
+	height: 5px;
+}
+
+#nav{
+	display: inline-block;
+	width: 25%;
+	vertical-align: top;
+}
+#shop_content{
+	display: inline-block;
+	width: 70%;
+	vertical-align: top;
+}
