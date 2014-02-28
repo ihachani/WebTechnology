@@ -1,0 +1,6 @@
+<!ELEMENT authentification (user+)>
+<!ELEMENT user (userName,password,email,telNum)>
+<!ELEMENT userName (#PCDATA)>
+<!ELEMENT password (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT telNum (#PCDATA)>

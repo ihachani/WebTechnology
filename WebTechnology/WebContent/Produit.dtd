@@ -1,5 +1,0 @@
-
-<!ELEMENT produit ( (id ,quantite+ ,nom)#REQUIRED ) >
-<!ELEMENT id (#PCDATA)>
-<!ELEMENT quantite (#PCDATA)>
-<!ELEMENT nom (#PCDATA)>

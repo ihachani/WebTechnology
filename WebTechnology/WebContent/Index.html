@@ -176,9 +176,11 @@
 		</section>
 	</div>
 	<script type="text/javascript">
-		xmlProduit = loadXMLDoc("Produit.xml");
+		xmlProduit = loadXMLDoc("xmls/Product/Homme/produitHomme.xml");
 		products = getAllProducts(xmlProduit);
 		showAllProducts(products);
+		product = getProduct(xmlProduit);
+		addQte(xmlProduit);
 	</script>
 	<footer>
 		<div id="sep"></div>

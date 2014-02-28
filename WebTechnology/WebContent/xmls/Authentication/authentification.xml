@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE authentification SYSTEM  "authentification.dtd">
+<authentification>
+    <user>
+        <userName>chaker</userName>
+        <password>123</password>
+        <email>ch@live.fr</email>
+        <telNum>23145541</telNum>
+    </user>
+</authentification>

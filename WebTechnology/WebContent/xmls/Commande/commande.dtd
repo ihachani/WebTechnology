@@ -1,0 +1,6 @@
+<!ELEMENT commandesClient (commande+)>
+<!ATTLIST commandesClient username CDATA #REQUIRED >
+<!ELEMENT commande (id,quantite,date)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT quantite (#PCDATA)>
+<!ELEMENT date (#PCDATA)>

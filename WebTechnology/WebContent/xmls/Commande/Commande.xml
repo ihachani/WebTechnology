@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE commandesClient SYSTEM "commande.dtd">
+<commandesClient username="chaker">
+    <commande>
+        <id></id>
+        <quantite></quantite>
+        <date></date>
+    </commande>
+</commandesClient>

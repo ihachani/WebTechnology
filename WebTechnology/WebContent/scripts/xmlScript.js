@@ -26,27 +26,28 @@ function loadXMLString(txt) {
 	return xmlDoc;
 }
 
-function getProduct(xmlProduit){
+function getProduct(xmlProduit) {
 	/*
-	 * Works in firefox.(firefox treats whitespaces as child nodes).
-	 * ie don't.
+	 * Works in firefox.(firefox treats whitespaces as child nodes). ie don't.
 	 * google chrome (i don't know yet).
 	 */
-	
+
 	product = new Array();
-	product.push(xmlProduit.getElementsByTagName("produit")[0].childNodes[1].childNodes[0].nodeValue);
-	product.push(xmlProduit.getElementsByTagName("produit")[0].childNodes[3].childNodes[0].nodeValue);
+	product
+			.push(xmlProduit.getElementsByTagName("produit")[0].childNodes[1].childNodes[0].nodeValue);
+	product
+			.push(xmlProduit.getElementsByTagName("produit")[0].childNodes[3].childNodes[0].nodeValue);
 	product[2] = xmlProduit.getElementsByTagName("produit")[0].childNodes[5].childNodes[0].nodeValue;
 	return product;
 }
 
-function showProduct(product){
+function showProduct(product) {
 	document.write("<p>" + product[0] + "</p>");
 	document.write("<p>" + product[1] + "</p>");
 	document.write("<p>" + product[2] + "</p>");
 }
 
-function getAllProducts(xmlProduit){
+function getAllProducts(xmlProduit) {
 	/*
 	 * For firefox for now
 	 */
@@ -55,7 +56,7 @@ function getAllProducts(xmlProduit){
 	return xmlProducts;
 }
 
-function getProductFromArray(pos,products){
+function getProductFromArray(pos, products) {
 	product = new Array();
 	product[0] = products[pos].childNodes[1].childNodes[0].nodeValue;
 	product[1] = products[pos].childNodes[3].childNodes[0].nodeValue;
@@ -63,8 +64,17 @@ function getProductFromArray(pos,products){
 	return product;
 }
 
-function showAllProducts(products){
-	for(i = 0; i < products.length ; i++){
+function showAllProducts(products) {
+	for (i = 0; i < products.length; i++) {
 		showProduct(getProductFromArray(i, products));
 	}
+}
+function addQte(xmlProduit) {
+	qte = xmlProduit.getElementsByTagName("produit")[0].childNodes[7].childNodes[0];
+	x = parseInt(qte.nodeValue);
+	document.write(x);
+	x = x+1;
+	document.write(x);
+	qte.nodeValue = x.toString();
+	document.write(qte.nodeValue);
 }
