@@ -10,9 +10,16 @@
 	</produit>
 	<produit>
 		<id>346</id>
-		<nom>Nike monster</nom>
+		<nom>Nike</nom>
 		<image>none</image>
 		<prix>234</prix>
 		<categorie>Chemise</categorie>
+	</produit>
+		<produit>
+		<id>347</id>
+		<nom>Nike</nom>
+		<image>none</image>
+		<prix>234</prix>
+		<categorie>Blouse</categorie>
 	</produit>
 </produits>

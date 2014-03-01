@@ -26,24 +26,52 @@
 		$xmlDoc->load("xmls/Product/Homme/produitHomme.xml");
 
 		//print $xmlDoc->saveXML();
-
-		  $produits = $xmlDoc->getElementsByTagName( "produit" );
-  			foreach( $produits as $produit )
+		
+			function affichage($xmlDoc){
+			$produits = $xmlDoc->getElementsByTagName( "produit" );
+			foreach( $produits as $produit )
   			{
   				$id = $produit->getElementsByTagName( "id" );
   				$id = $id->item(0)->nodeValue;
  
   				$categorie = $produit->getElementsByTagName( "categorie" );
   				$categorie = $categorie->item(0)->nodeValue;
-  
-			 	echo "$id - $categorie \n";
+  				
+				$nom = $produit->getElementsByTagName( "nom" );
+  				$nom = $nom->item(0)->nodeValue;
+				
+				$prix = $produit->getElementsByTagName( "prix" );
+  				$prix = $prix->item(0)->nodeValue;
+					
+			 	echo "id: $id prix: $prix nom: $nom categorie: $categorie " ."<br>";
   			}
-		/*$arr = array();
+		}
+		affichage($xmlDoc);
+		  		/*$arr = array();
 		$arr[0]=0;
 		echo "$arr[0]";*/
-		/*function RechercheProductNom($xmlDoc,$string){
-			retVal = 
-		}*/
+		function RechercheProductNom($xmlDoc,$string){
+			$retVal = array();
+			$produits = $xmlDoc->getElementsByTagName( "produit" );
+  			foreach( $produits as $produit )
+  			{
+  				$nom = $produit->getElementsByTagName( "nom" );
+  				$nom = $nom->item(0)->nodeValue;
+				if ( $nom == $string){
+					echo "$nom" . "<br>";
+					$retVal[] = $nom;
+				}  
+			 	
+  			}
+		return $retVal;
+		}
+		
+		$arr = RechercheProductNom($xmlDoc,"Nike");
+		var_dump($arr);
+		$arr = array_values($arr);
+		var_dump($arr);
+		echo "$arr[0]";
+		
 	?>
 </body>
 </html>
