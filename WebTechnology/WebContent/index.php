@@ -84,15 +84,14 @@
 			<div id="shop_content">
 
 				<div id="Product1" class="media">
-					<a class="pull-left" href="#"><img
-						class="media-object img-rounded" data-src="holder.js/48x48/new"
-						alt="48x48"
+					<a class="pull-left" href="#"><img class="media-object img-rounded"
+						data-src="holder.js/48x48/new" alt="48x48"
 						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACHElEQVRoge2UTWsTQQCG+8e2NVFpsVgQPIjam4jgQfQkeBAFQawnvfgDhO5KokGNNrWFkmp6CNra1hq/oGk22XwnzaZNdje7j4e0tnqx7EJHYRaeyzL7zvvMzsyAoub4nxkQXUAKiC4gBUQXkAKiC0gB0QWkgOgCUkB0ASkguoAUEF1AChxk0NCzCtMWAKx/NAipORStwLVPHXSn/x7b4d1ymVHtcPMOIJDn6o8eu8/uhEenWhgAZpuJVIOpLQCHR3H9UPP+KjAya1J0bbTlLr19E4biTb4CdrnO+ViRhzXAs7j3XOfcooULrH4wOBarMmcDbZPLUT95Af7AYKSEanpk10qcSnZ+m1BRdcYXu3R+raXLQtogrOZQnhg8qAKuxZuiCzhoMzpDfvP8CeicXbLpWdvcSRhcSFt4QCFT4cxTnfCrJl8At97idrJGdBNwu9x/0f8+HG+w6vWrFDIlhgPm+RK49H1vr+5/jLUipxf6p/Dbe4Mjqs74Sv/0pZN5FDXH8ekW2Z3xm9kqY1qwPF9baDRR4Waqxq1UjbsZG4D6RoPrr/MMz7RpAF7TZCLV4KUJ0GMyoTMYKfG4BdgdJtd7gMvsfIGTPvMCX6OKmmPkzz2r5bmy0mHD3llGy2ZuqcQJTefiZwfweJsqEIqWiWwB1jY3Yn7yAl+j/zZSQDRSQDRSQDRSQDRSQDRSQDRSQDRSQDRSQDRSQDQ/AT40qTLlbn5zAAAAAElFTkSuQmCC"
 						style="width: 48px; height: 48px;"></a>
 					<div class="media-body">
 						<h4 class="media-heading">Media heading</h4>
-						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel
-							metus scelerisque ante sollicitudin commodo. Cras purus odio,
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+							scelerisque ante sollicitudin commodo. Cras purus odio,
 							vestibulum in vulputate at, tempus viverra turpis. Fusce
 							condimentum nunc ac nisi vulputate fringilla. Donec lacinia
 							congue felis in faucibus.</p>
@@ -102,15 +101,14 @@
 				<hr class="hr-line"></hr>
 
 				<div id="Product2" class="media">
-					<a class="pull-left" href="#"><img
-						class="media-object img-rounded" data-src="holder.js/48x48/new"
-						alt="48x48"
+					<a class="pull-left" href="#"><img class="media-object img-rounded"
+						data-src="holder.js/48x48/new" alt="48x48"
 						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACHElEQVRoge2UTWsTQQCG+8e2NVFpsVgQPIjam4jgQfQkeBAFQawnvfgDhO5KokGNNrWFkmp6CNra1hq/oGk22XwnzaZNdje7j4e0tnqx7EJHYRaeyzL7zvvMzsyAoub4nxkQXUAKiC4gBUQXkAKiC0gB0QWkgOgCUkB0ASkguoAUEF1AChxk0NCzCtMWAKx/NAipORStwLVPHXSn/x7b4d1ymVHtcPMOIJDn6o8eu8/uhEenWhgAZpuJVIOpLQCHR3H9UPP+KjAya1J0bbTlLr19E4biTb4CdrnO+ViRhzXAs7j3XOfcooULrH4wOBarMmcDbZPLUT95Af7AYKSEanpk10qcSnZ+m1BRdcYXu3R+raXLQtogrOZQnhg8qAKuxZuiCzhoMzpDfvP8CeicXbLpWdvcSRhcSFt4QCFT4cxTnfCrJl8At97idrJGdBNwu9x/0f8+HG+w6vWrFDIlhgPm+RK49H1vr+5/jLUipxf6p/Dbe4Mjqs74Sv/0pZN5FDXH8ekW2Z3xm9kqY1qwPF9baDRR4Waqxq1UjbsZG4D6RoPrr/MMz7RpAF7TZCLV4KUJ0GMyoTMYKfG4BdgdJtd7gMvsfIGTPvMCX6OKmmPkzz2r5bmy0mHD3llGy2ZuqcQJTefiZwfweJsqEIqWiWwB1jY3Yn7yAl+j/zZSQDRSQDRSQDRSQDRSQDRSQDRSQDRSQDRSQDRSQDQ/AT40qTLlbn5zAAAAAElFTkSuQmCC"
 						style="width: 48px; height: 48px;"></a>
 					<div class="media-body">
 						<h4 class="media-heading">Media heading</h4>
-						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel
-							metus scelerisque ante sollicitudin commodo. Cras purus odio,
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+							scelerisque ante sollicitudin commodo. Cras purus odio,
 							vestibulum in vulputate at, tempus viverra turpis. Fusce
 							condimentum nunc ac nisi vulputate fringilla. Donec lacinia
 							congue felis in faucibus.</p>
@@ -120,15 +118,14 @@
 				<hr class="hr-line"></hr>
 
 				<div id="Product3" class="media">
-					<a class="pull-left" href="#"><img
-						class="media-object img-rounded" data-src="holder.js/48x48/new"
-						alt="48x48"
+					<a class="pull-left" href="#"><img class="media-object img-rounded"
+						data-src="holder.js/48x48/new" alt="48x48"
 						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACHElEQVRoge2UTWsTQQCG+8e2NVFpsVgQPIjam4jgQfQkeBAFQawnvfgDhO5KokGNNrWFkmp6CNra1hq/oGk22XwnzaZNdje7j4e0tnqx7EJHYRaeyzL7zvvMzsyAoub4nxkQXUAKiC4gBUQXkAKiC0gB0QWkgOgCUkB0ASkguoAUEF1AChxk0NCzCtMWAKx/NAipORStwLVPHXSn/x7b4d1ymVHtcPMOIJDn6o8eu8/uhEenWhgAZpuJVIOpLQCHR3H9UPP+KjAya1J0bbTlLr19E4biTb4CdrnO+ViRhzXAs7j3XOfcooULrH4wOBarMmcDbZPLUT95Af7AYKSEanpk10qcSnZ+m1BRdcYXu3R+raXLQtogrOZQnhg8qAKuxZuiCzhoMzpDfvP8CeicXbLpWdvcSRhcSFt4QCFT4cxTnfCrJl8At97idrJGdBNwu9x/0f8+HG+w6vWrFDIlhgPm+RK49H1vr+5/jLUipxf6p/Dbe4Mjqs74Sv/0pZN5FDXH8ekW2Z3xm9kqY1qwPF9baDRR4Waqxq1UjbsZG4D6RoPrr/MMz7RpAF7TZCLV4KUJ0GMyoTMYKfG4BdgdJtd7gMvsfIGTPvMCX6OKmmPkzz2r5bmy0mHD3llGy2ZuqcQJTefiZwfweJsqEIqWiWwB1jY3Yn7yAl+j/zZSQDRSQDRSQDRSQDRSQDRSQDRSQDRSQDRSQDRSQDQ/AT40qTLlbn5zAAAAAElFTkSuQmCC"
 						style="width: 48px; height: 48px;"></a>
 					<div class="media-body">
 						<h4 class="media-heading">Media heading</h4>
-						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel
-							metus scelerisque ante sollicitudin commodo. Cras purus odio,
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+							scelerisque ante sollicitudin commodo. Cras purus odio,
 							vestibulum in vulputate at, tempus viverra turpis. Fusce
 							condimentum nunc ac nisi vulputate fringilla. Donec lacinia
 							congue felis in faucibus.</p>
@@ -138,33 +135,31 @@
 				<hr class="hr-line"></hr>
 
 				<div id="Product4" class="media">
-					<a class="pull-left" href="#"><img
-						class="media-object img-rounded" data-src="holder.js/48x48/new"
-						alt="48x48"
+					<a class="pull-left" href="#"><img class="media-object img-rounded"
+						data-src="holder.js/48x48/new" alt="48x48"
 						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACHElEQVRoge2UTWsTQQCG+8e2NVFpsVgQPIjam4jgQfQkeBAFQawnvfgDhO5KokGNNrWFkmp6CNra1hq/oGk22XwnzaZNdje7j4e0tnqx7EJHYRaeyzL7zvvMzsyAoub4nxkQXUAKiC4gBUQXkAKiC0gB0QWkgOgCUkB0ASkguoAUEF1AChxk0NCzCtMWAKx/NAipORStwLVPHXSn/x7b4d1ymVHtcPMOIJDn6o8eu8/uhEenWhgAZpuJVIOpLQCHR3H9UPP+KjAya1J0bbTlLr19E4biTb4CdrnO+ViRhzXAs7j3XOfcooULrH4wOBarMmcDbZPLUT95Af7AYKSEanpk10qcSnZ+m1BRdcYXu3R+raXLQtogrOZQnhg8qAKuxZuiCzhoMzpDfvP8CeicXbLpWdvcSRhcSFt4QCFT4cxTnfCrJl8At97idrJGdBNwu9x/0f8+HG+w6vWrFDIlhgPm+RK49H1vr+5/jLUipxf6p/Dbe4Mjqs74Sv/0pZN5FDXH8ekW2Z3xm9kqY1qwPF9baDRR4Waqxq1UjbsZG4D6RoPrr/MMz7RpAF7TZCLV4KUJ0GMyoTMYKfG4BdgdJtd7gMvsfIGTPvMCX6OKmmPkzz2r5bmy0mHD3llGy2ZuqcQJTefiZwfweJsqEIqWiWwB1jY3Yn7yAl+j/zZSQDRSQDRSQDRSQDRSQDRSQDRSQDRSQDRSQDRSQDQ/AT40qTLlbn5zAAAAAElFTkSuQmCC"
 						style="width: 48px; height: 48px;"></a>
 					<div class="media-body">
 						<h4 class="media-heading">Media heading</h4>
-						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel
-							metus scelerisque ante sollicitudin commodo. Cras purus odio,
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+							scelerisque ante sollicitudin commodo. Cras purus odio,
 							vestibulum in vulputate at, tempus viverra turpis. Fusce
 							condimentum nunc ac nisi vulputate fringilla. Donec lacinia
 							congue felis in faucibus.</p>
 					</div>
 				</div>
-				
+
 				<hr class="hr-line"></hr>
 
 				<div id="Product5" class="media">
-					<a class="pull-left" href="#"><img
-						class="media-object img-rounded" data-src="holder.js/48x48/new"
-						alt="48x48"
+					<a class="pull-left" href="#"><img class="media-object img-rounded"
+						data-src="holder.js/48x48/new" alt="48x48"
 						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACHElEQVRoge2UTWsTQQCG+8e2NVFpsVgQPIjam4jgQfQkeBAFQawnvfgDhO5KokGNNrWFkmp6CNra1hq/oGk22XwnzaZNdje7j4e0tnqx7EJHYRaeyzL7zvvMzsyAoub4nxkQXUAKiC4gBUQXkAKiC0gB0QWkgOgCUkB0ASkguoAUEF1AChxk0NCzCtMWAKx/NAipORStwLVPHXSn/x7b4d1ymVHtcPMOIJDn6o8eu8/uhEenWhgAZpuJVIOpLQCHR3H9UPP+KjAya1J0bbTlLr19E4biTb4CdrnO+ViRhzXAs7j3XOfcooULrH4wOBarMmcDbZPLUT95Af7AYKSEanpk10qcSnZ+m1BRdcYXu3R+raXLQtogrOZQnhg8qAKuxZuiCzhoMzpDfvP8CeicXbLpWdvcSRhcSFt4QCFT4cxTnfCrJl8At97idrJGdBNwu9x/0f8+HG+w6vWrFDIlhgPm+RK49H1vr+5/jLUipxf6p/Dbe4Mjqs74Sv/0pZN5FDXH8ekW2Z3xm9kqY1qwPF9baDRR4Waqxq1UjbsZG4D6RoPrr/MMz7RpAF7TZCLV4KUJ0GMyoTMYKfG4BdgdJtd7gMvsfIGTPvMCX6OKmmPkzz2r5bmy0mHD3llGy2ZuqcQJTefiZwfweJsqEIqWiWwB1jY3Yn7yAl+j/zZSQDRSQDRSQDRSQDRSQDRSQDRSQDRSQDRSQDRSQDQ/AT40qTLlbn5zAAAAAElFTkSuQmCC"
 						style="width: 48px; height: 48px;"></a>
 					<div class="media-body">
 						<h4 class="media-heading">Media heading</h4>
-						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel
-							metus scelerisque ante sollicitudin commodo. Cras purus odio,
+						<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+							scelerisque ante sollicitudin commodo. Cras purus odio,
 							vestibulum in vulputate at, tempus viverra turpis. Fusce
 							condimentum nunc ac nisi vulputate fringilla. Donec lacinia
 							congue felis in faucibus.</p>
