@@ -3,9 +3,16 @@
 <produits>
 	<produit>
 		<id>345</id>
-		<nom>qsfqsf</nom>
+		<nom>Nike monster</nom>
 		<image>none</image>
 		<prix>234</prix>
-		<categorie></categorie>
+		<categorie>Chemise</categorie>
+	</produit>
+	<produit>
+		<id>346</id>
+		<nom>Nike monster</nom>
+		<image>none</image>
+		<prix>234</prix>
+		<categorie>Chemise</categorie>
 	</produit>
 </produits>
