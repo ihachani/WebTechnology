@@ -7,9 +7,8 @@
 <script src="js/md5.min.js"></script>
 </head>
 <body>
-	<script type="text/javascript">
-		var hash = md5("value");
-		document.write("<p>" + hash + "</p>");
-	</script>
+	<?php
+		echo "Hello , world!";
+	?>
 </body>
 </html>
