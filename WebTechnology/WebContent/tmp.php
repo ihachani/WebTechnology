@@ -70,22 +70,15 @@
 		foreach ( $produits as $produit ) {
 			$nom = $produit->getElementsByTagName ( "nom" );
 			$nom = $nom->item ( 0 )->nodeValue;
-			if ($nom == $string) {
+			if (strcasecmp ( $string, $nom ) == 0) {
 				afficheProduit ( $produit );
 				$retVal [] = $produit;
 			}
 		}
 		return $retVal;
 	}
-	
-	affichage ( $xmlDoc );
-	/*
-	 * $arr = array(); $arr[0]=0; echo "$arr[0]";
-	 */
-	
-	$arr = RechercheProductNom ( $xmlDoc, "Nike" );
-	$arr = array_values ( $arr );
-	echo "$arr[0]";
+	affichage($xmlDoc);
 	?>
+	
 </body>
 </html>

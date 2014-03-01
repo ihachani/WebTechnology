@@ -48,14 +48,13 @@ function afficheproduit($produit) {
  * affiche les produit ayants un nom == string
  */
 function RechercheProductNom($xmlDoc, $string) {
-	echo "Rechereche nom == $string" . "<br>";
 	$retVal = array ();
 	$produits = $xmlDoc->getElementsByTagName ( "produit" );
 	foreach ( $produits as $produit ) {
 		$nom = $produit->getElementsByTagName ( "nom" );
 		$nom = $nom->item ( 0 )->nodeValue;
 		// if ($nom == $string) {
-		if (strcasecmp ( $string, $nom ) == 0) {//Case insensitive comparaison.
+		if (strcasecmp ( $string, $nom ) == 0) { // Case insensitive comparaison.
 			afficheProduit ( $produit );
 			$retVal [] = $produit;
 		}

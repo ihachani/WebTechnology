@@ -22,4 +22,11 @@
 		<prix>234</prix>
 		<categorie>Blouse</categorie>
 	</produit>
+		<produit>
+		<id>346</id>
+		<nom>Adidass</nom>
+		<image>none</image>
+		<prix>234</prix>
+		<categorie>Chemise</categorie>
+	</produit>
 </produits>
