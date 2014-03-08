@@ -115,9 +115,10 @@ function addToXml($path, $fields, $values, $nb) {
 
 /**
  * Shows the xml file and returns an array that contains the values.
- * @param string $path
- * @param array $fields
- * @param integer $nb
+ * 
+ * @param string $path        	
+ * @param array $fields        	
+ * @param integer $nb        	
  * @return multitype:multitype:string
  */
 function showXmlFile($path, $fields, $nb) {
@@ -127,30 +128,29 @@ function showXmlFile($path, $fields, $nb) {
 	$xml->load ( $path );
 	
 	$nodes = $xml->getElementsByTagName ( $fields [1] );
-	$retVal = array();
+	$retVal = array ();
 	foreach ( $nodes as $node ) {
-		$values = array();
+		$values = array ();
 		for($i = 2; $i < $nb; $i ++) {
-			$tmp = $node->getElementsByTagName ( $fields[$i] );
+			$tmp = $node->getElementsByTagName ( $fields [$i] );
 			$tmp = $tmp->item ( 0 )->nodeValue;
-			$values[] = $tmp;
-			echo "$fields[$i] : $tmp " . "<br>" ;
+			$values [] = $tmp;
+			echo "$fields[$i] : $tmp " . "<br>";
 		}
-		$retVal[] = $values;
+		$retVal [] = $values;
 	}
 	return $retVal;
 }
 
-
-
-
 /**
  * this function will look for the 3rd field that matches the $id and add the value to its 4th field
- * @param string $path
- * @param array $fields the xml file fields
- * @param string $id
- * @param int $nb
- * @param int $vlaue
+ * 
+ * @param string $path        	
+ * @param array $fields
+ *        	the xml file fields
+ * @param string $id        	
+ * @param int $nb        	
+ * @param int $vlaue        	
  */
 function addToNode($path, $fields, $id, $nb, $value) {
 	$xml = new DOMDocument ();
@@ -159,10 +159,10 @@ function addToNode($path, $fields, $id, $nb, $value) {
 	$xml->load ( $path );
 	$nodes = $xml->getElementsByTagName ( $fields [1] );
 	foreach ( $nodes as $node ) {
-		$tmp = $node->getElementsByTagName ( $fields [$nb[0]] );
+		$tmp = $node->getElementsByTagName ( $fields [$nb [0]] );
 		$tmp = $tmp->item ( 0 )->nodeValue;
 		if ($tmp == $id) {
-			$tmp2 = $node->getElementsByTagName ( $fields [$nb[1]] );
+			$tmp2 = $node->getElementsByTagName ( $fields [$nb [1]] );
 			$val = $tmp2->item ( 0 )->nodeValue;
 			$val = intval ( $val );
 			$val = $val + $value;
@@ -175,7 +175,6 @@ function addToNode($path, $fields, $id, $nb, $value) {
 	}
 	return false;
 }
-
 
 /**
  * Lookup an id inside the xml file and change the values
@@ -208,7 +207,7 @@ function updateNode($path, $fields, $values, $nb, $id, $idn) {
 		if ($tmp == $id) {
 			for($i = 2; $i < $nb; $i ++) {
 				$tmp2 = $node->getElementsByTagName ( $fields [$i] );
-				$tmp2->item ( 0 )->nodeValue = $values[$i];
+				$tmp2->item ( 0 )->nodeValue = $values [$i];
 			}
 			$xml->saveXML ();
 			$status = $xml->save ( $path );
@@ -218,7 +217,34 @@ function updateNode($path, $fields, $values, $nb, $id, $idn) {
 	return false;
 }
 
-
+/**
+ *
+ * @param string $path        	
+ * @param array $fields        	
+ * @param string $id        	
+ * @param int $nb        	
+ * @return int false
+ */
+function removeNode($path, $fields, $id, $nb) {
+	$xml = new DOMDocument ();
+	$xml->formatOutput = true;
+	$xml->preserveWhiteSpace = false;
+	$xml->load ( $path );
+	$nodes = $xml->getElementsByTagName ( $fields [1] );
+	
+	foreach ( $nodes as $node ) {
+		$tmp = $node->getElementsByTagName ( $fields [$nb] );
+		$tmp = $tmp->item ( 0 )->nodeValue;
+		if ($tmp == $id) {
+			$parent = $xml->getElementsByTagName ( $fields [0] )->item ( 0 );
+			$parent->removeChild ( $node );
+			$xml->saveXML ();
+			$status = $xml->save ( $path );
+			return $status;
+		}
+	}
+	return false;
+}
 
 /*
  * $path = "xmls/Product/Homme/produitHomme.xml"; $dom = new DOMDocument (); $dom->formatOutput = true; $dom->preserveWhiteSpace = false; $dom->load ( $path ); addProduct ( $dom, "1", "azerty", "fff", "lol", $path );
@@ -245,19 +271,16 @@ $values1 [] = "20";
 /*
  * for ( $i = 0 ; $i < 3 ;$i++){ echo $fields[$i] . ":" . $values[$i] . "<br>"; }
  */
-$nbs = array();
+$nbs = array ();
 $nbs [] = 2;
 $nbs [] = 3;
-//addToXml ( $path, $fields, $values, 4 );
-addToNode($path,$fields,"z1",$nbs,10);
-updateNode($path, $fields, $values1, 4, "z2", 2);
-$array = showXmlFile ($path, $fields, 4);
-print_r($array);
+// addToXml ( $path, $fields, $values, 4 );
+addToNode ( $path, $fields, "z1", $nbs, 10 );
+//updateNode ( $path, $fields, $values1, 4, "z2", 2 );
+removeNode($path, $fields, "z2", 2);
+$array = showXmlFile ( $path, $fields, 4 );
+print_r ( $array );
 /*
-$xml = new DOMDocument ();
-$xml->formatOutput = true;
-$xml->preserveWhiteSpace = false;
-$xml->load ( $path );
-
-affichage ( $xml );*/
+ * $xml = new DOMDocument (); $xml->formatOutput = true; $xml->preserveWhiteSpace = false; $xml->load ( $path ); affichage ( $xml );
+ */
 ?>

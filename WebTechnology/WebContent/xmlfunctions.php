@@ -140,6 +140,7 @@ function addToNode($path, $fields, $id, $nb, $value) {
  *        	The id value.
  * @param int $idn
  *        	The id's field number.
+ * @return int false
  */
 function updateNode($path, $fields, $values, $nb, $id, $idn) {
 	$xml = new DOMDocument ();
@@ -153,8 +154,43 @@ function updateNode($path, $fields, $values, $nb, $id, $idn) {
 		if ($tmp == $id) {
 			for($i = 2; $i < $nb; $i ++) {
 				$tmp2 = $node->getElementsByTagName ( $fields [$i] );
-				$tmp2->item ( 0 )->nodeValue = $values[$i];
+				$tmp2->item ( 0 )->nodeValue = $values [$i];
 			}
+			$xml->saveXML ();
+			$status = $xml->save ( $path );
+			return $status;
+		}
+	}
+	return false;
+}
+
+/**
+ * Remove the node with the id that matches the one given.
+ *
+ * @param string $path
+ *        	xml file path.
+ * @param array $fields
+ *        	The xml file fields.
+ * @param string $id
+ *        	The id value.
+ * @param int $nb
+ *        	The id's field number.
+ * @return int false
+ *        
+ */
+function removeNode($path, $fields, $id, $nb) {
+	$xml = new DOMDocument ();
+	$xml->formatOutput = true;
+	$xml->preserveWhiteSpace = false;
+	$xml->load ( $path );
+	$nodes = $xml->getElementsByTagName ( $fields [1] );
+	
+	foreach ( $nodes as $node ) {
+		$tmp = $node->getElementsByTagName ( $fields [$nb] );
+		$tmp = $tmp->item ( 0 )->nodeValue;
+		if ($tmp == $id) {
+			$parent = $xml->getElementsByTagName ( $fields [0] )->item ( 0 );
+			$parent->removeChild ( $node );
 			$xml->saveXML ();
 			$status = $xml->save ( $path );
 			return $status;
