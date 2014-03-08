@@ -140,6 +140,44 @@ function showXmlFile($path, $fields, $nb) {
 	}
 	return $retVal;
 }
+
+
+
+
+/**
+ * this function will look for the 3rd field that matches the $id and add the value to its 4th field
+ * @param string $path
+ * @param array $fields the xml file fields
+ * @param string $id
+ * @param int $nb
+ * @param int $vlaue
+ */
+function addToNode($path, $fields, $id, $nb, $value) {
+	$xml = new DOMDocument ();
+	$xml->formatOutput = true;
+	$xml->preserveWhiteSpace = false;
+	$xml->load ( $path );
+	$nodes = $xml->getElementsByTagName ( $fields [1] );
+	foreach ( $nodes as $node ) {
+		$tmp = $node->getElementsByTagName ( $fields [$nb[0]] );
+		$tmp = $tmp->item ( 0 )->nodeValue;
+		if ($tmp == $id) {
+			$tmp2 = $node->getElementsByTagName ( $fields [$nb[1]] );
+			$val = $tmp2->item ( 0 )->nodeValue;
+			$val = intval ( $val );
+			$val = $val + $value;
+			strval ( $val );
+			$tmp2->item ( 0 )->nodeValue = $val;
+			$xml->saveXML ();
+			$status = $xml->save ( $path );
+			return $status;
+		}
+	}
+	return false;
+}
+
+
+
 /*
  * $path = "xmls/Product/Homme/produitHomme.xml"; $dom = new DOMDocument (); $dom->formatOutput = true; $dom->preserveWhiteSpace = false; $dom->load ( $path ); addProduct ( $dom, "1", "azerty", "fff", "lol", $path );
  */
@@ -148,21 +186,24 @@ $path = "xmls/tmp.xml";
  * $xml = new DOMDocument (); $xml->formatOutput = true; $xml->preserveWhiteSpace = false; $xml->load ( $path );
  */
 $fields = array ();
-$fields [] = "azerty";
-$fields [] = "qwerty";
-$fields [] = "ahmed";
-$fields [] = "zedfg";
+$fields [] = "produits";
+$fields [] = "produit";
+$fields [] = "id";
+$fields [] = "qte";
 $values = array ();
 $values [] = "none";
 $values [] = "none";
-$values [] = "123";
-$values [] = "loooool";
+$values [] = "z1";
+$values [] = "20";
 
 /*
  * for ( $i = 0 ; $i < 3 ;$i++){ echo $fields[$i] . ":" . $values[$i] . "<br>"; }
  */
-
-addToXml ( $path, $fields, $values, 4 );
+$nbs = array();
+$nbs [] = 2;
+$nbs [] = 3;
+//addToXml ( $path, $fields, $values, 4 );
+addToNode($path,$fields,"z1",$nbs,10);
 $array = showXmlFile ($path, $fields, 4);
 print_r($array);
 /*
