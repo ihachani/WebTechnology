@@ -177,6 +177,48 @@ function addToNode($path, $fields, $id, $nb, $value) {
 }
 
 
+/**
+ * Lookup an id inside the xml file and change the values
+ * with the ones suplied inside the values array.
+ *
+ * @param string $path
+ *        	xml file path.
+ * @param array $fields
+ *        	The xml file fields.
+ * @param array $values
+ *        	The new fields values.
+ *        	The fields number and the values number must be equal.
+ *        	The first 2 fields values must be provided as "none".
+ * @param int $nb
+ *        	The fields number.
+ * @param string $id
+ *        	The id value.
+ * @param int $idn
+ *        	The id's field number.
+ */
+function updateNode($path, $fields, $values, $nb, $id, $idn) {
+	$xml = new DOMDocument ();
+	$xml->formatOutput = true;
+	$xml->preserveWhiteSpace = false;
+	$xml->load ( $path );
+	$nodes = $xml->getElementsByTagName ( $fields [1] );
+	foreach ( $nodes as $node ) {
+		$tmp = $node->getElementsByTagName ( $fields [$idn] );
+		$tmp = $tmp->item ( 0 )->nodeValue;
+		if ($tmp == $id) {
+			for($i = 2; $i < $nb; $i ++) {
+				$tmp2 = $node->getElementsByTagName ( $fields [$i] );
+				$tmp2->item ( 0 )->nodeValue = $values[$i];
+			}
+			$xml->saveXML ();
+			$status = $xml->save ( $path );
+			return $status;
+		}
+	}
+	return false;
+}
+
+
 
 /*
  * $path = "xmls/Product/Homme/produitHomme.xml"; $dom = new DOMDocument (); $dom->formatOutput = true; $dom->preserveWhiteSpace = false; $dom->load ( $path ); addProduct ( $dom, "1", "azerty", "fff", "lol", $path );
@@ -195,7 +237,11 @@ $values [] = "none";
 $values [] = "none";
 $values [] = "z1";
 $values [] = "20";
-
+$values1 = array ();
+$values1 [] = "none";
+$values1 [] = "none";
+$values1 [] = "z1";
+$values1 [] = "20";
 /*
  * for ( $i = 0 ; $i < 3 ;$i++){ echo $fields[$i] . ":" . $values[$i] . "<br>"; }
  */
@@ -204,6 +250,7 @@ $nbs [] = 2;
 $nbs [] = 3;
 //addToXml ( $path, $fields, $values, 4 );
 addToNode($path,$fields,"z1",$nbs,10);
+updateNode($path, $fields, $values1, 4, "z2", 2);
 $array = showXmlFile ($path, $fields, 4);
 print_r($array);
 /*

@@ -84,7 +84,8 @@ function showXmlFile($path, $fields, $nb) {
 }
 
 /**
- * this function will look for the 3rd field that matches the $id and add the value to its 4th field.
+ * This function will look for the 3rd field that matches
+ * the $id and add the value to its 4th field.
  *
  * @param string $path
  *        	xml file path.
@@ -113,6 +114,47 @@ function addToNode($path, $fields, $id, $nb, $value) {
 			$val = $val + $value;
 			strval ( $val );
 			$tmp2->item ( 0 )->nodeValue = $val;
+			$xml->saveXML ();
+			$status = $xml->save ( $path );
+			return $status;
+		}
+	}
+	return false;
+}
+
+/**
+ * Lookup an id inside the xml file and change the values
+ * with the ones suplied inside the values array.
+ *
+ * @param string $path
+ *        	xml file path.
+ * @param array $fields
+ *        	The xml file fields.
+ * @param array $values
+ *        	The new fields values.
+ *        	The fields number and the values number must be equal.
+ *        	The first 2 fields values must be provided as "none".
+ * @param int $nb
+ *        	The fields number.
+ * @param string $id
+ *        	The id value.
+ * @param int $idn
+ *        	The id's field number.
+ */
+function updateNode($path, $fields, $values, $nb, $id, $idn) {
+	$xml = new DOMDocument ();
+	$xml->formatOutput = true;
+	$xml->preserveWhiteSpace = false;
+	$xml->load ( $path );
+	$nodes = $xml->getElementsByTagName ( $fields [1] );
+	foreach ( $nodes as $node ) {
+		$tmp = $node->getElementsByTagName ( $fields [$idn] );
+		$tmp = $tmp->item ( 0 )->nodeValue;
+		if ($tmp == $id) {
+			for($i = 2; $i < $nb; $i ++) {
+				$tmp2 = $node->getElementsByTagName ( $fields [$i] );
+				$tmp2->item ( 0 )->nodeValue = $values[$i];
+			}
 			$xml->saveXML ();
 			$status = $xml->save ( $path );
 			return $status;
