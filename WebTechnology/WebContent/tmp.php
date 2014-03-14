@@ -9,7 +9,7 @@
 <body>
 	<form action="target.php" method="post">
 		<input type="text" name="username" value="" /> <input type="submit"
-			name="submit value=" Submit" />
+			name="submit" value="Submit" />
 	</form>
 	<?php
 	

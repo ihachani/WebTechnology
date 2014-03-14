@@ -95,7 +95,7 @@ function showXmlFile($path, $fields, $nb) {
  *        	the id value.
  * @param array $nb
  *        	the first is the id field number the second is the field to be updated number.
- * @param int $vlaue
+ * @param int $value
  *        	the value to be added (+|-).
  */
 function addToNode($path, $fields, $id, $nb, $value) {

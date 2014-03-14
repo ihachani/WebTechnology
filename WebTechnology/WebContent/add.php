@@ -275,9 +275,9 @@ $nbs = array ();
 $nbs [] = 2;
 $nbs [] = 3;
 // addToXml ( $path, $fields, $values, 4 );
-addToNode ( $path, $fields, "z1", $nbs, 10 );
+//addToNode ( $path, $fields, "z1", $nbs, 10 );
 //updateNode ( $path, $fields, $values1, 4, "z2", 2 );
-removeNode($path, $fields, "z2", 2);
+//removeNode($path, $fields, "z2", 2);
 $array = showXmlFile ( $path, $fields, 4 );
 print_r ( $array );
 /*
