@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<produits>
+	<produit>
+		<id>z1</id>
+		<qte>20</qte>
+		<prix>230</prix>
+		<img>assets/img.png</img>
+	</produit>
+	<produit>
+		<id>z2</id>
+		<qte>20</qte>
+		<prix>230</prix>
+		<img>assets/img.png</img>
+	</produit>
+	<produit>
+		<id>z3</id>
+		<qte>20</qte>
+		<prix>230</prix>
+		<img>assets/img.png</img>
+	</produit>
+	<produit>
+		<id>z4</id>
+		<qte>20</qte>
+		<prix>230</prix>
+		<img>assets/img.png</img>
+	</produit>
+	<produit>
+		<id>z5</id>
+		<qte>20</qte>
+		<prix>230</prix>
+		<img>assets/img.png</img>
+	</produit>
+</produits>

@@ -191,30 +191,6 @@ $fields [] = "produit";
 $fields [] = "id";
 $fields [] = "qte";
 
-$obj = new xmlFile ( "xmls/tmp.xml", $fields, 4, 2 );
+$obj = new xmlFile ( "tmp.xml", $fields, 4, 2 );
 
-$result = $obj->showXmlFile ();
-echo "ShowFile" . "<br>";
-print_r ( $result );
-$values = array ();
-$values [] = "";
-$values [] = "";
-$values [] = "z3";
-$values [] = "50";
-echo "<br>" . "add to xml" . "<br>";
-$obj->addToXml ( $values );
-$result = $obj->showXmlFile ();
-print_r ( $result );
-echo "<br>" . "remove node" . "<br>";
-$obj->removeNode ( "z3" );
-$result = $obj->showXmlFile ();
-print_r ( $result );
-echo "<br>" . "update node" . "<br>";
-$obj->updateNode ( $values, "z1" );
-$result = $obj->showXmlFile ();
-print_r ( $result );
-echo "<br>" . "add to node" . "<br>";
-$obj->addToNode ( "z3", 3, 5 );
-$result = $obj->showXmlFile ();
-print_r ( $result );
 ?>
