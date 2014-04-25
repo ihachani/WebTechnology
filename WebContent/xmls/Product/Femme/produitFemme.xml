@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE produits SYSTEM "produitFemme.dtd">
+<produits>
+	<produit>
+		<id>345</id>
+		<nom>qsfqsf</nom>
+		<image></image>
+		<prix>234</prix>
+		<categorie></categorie>
+	</produit>
+</produits>

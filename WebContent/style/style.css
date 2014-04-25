@@ -1,0 +1,57 @@
+@CHARSET "UTF-8";
+
+#main_body_warper {
+	margin-left: 5%;
+	margin-right: 5%;
+	min-width: 50em;
+	padding: 10px;
+}
+
+footer {
+	background-color: #1b71a0;
+	height: 200 px;
+}
+
+#footer_container {
+	position: relative;
+	padding: 50px;
+	background-color: black;
+	padding: 50px;
+}
+
+#copyright {
+	position: absolute;
+	bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+
+#sep {
+	background-color: #2986b9;
+	height: 5px;
+}
+
+#nav {
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+}
+
+#shop_content {
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+}
+
+.product_container {
+	position: relative;
+	padding-bottom: 5%;
+}
+
+.price {
+	position: absolute;
+	bottom: 0px;
+	right: 5px;
+}

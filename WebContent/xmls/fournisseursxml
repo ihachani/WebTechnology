@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fournisseurs>
+	<fournisseur>
+		<nom>Ahmed</nom>
+	</fournisseur>
+	<fournisseur>
+		<nom>Ali</nom>
+	</fournisseur>
+</fournisseurs>
