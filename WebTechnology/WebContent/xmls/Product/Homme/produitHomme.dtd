@@ -1,7 +1,0 @@
-<!ELEMENT produits (produit+)>
-<!ELEMENT produit (id,nom,image,prix,categorie)>
-<!ELEMENT id (#PCDATA)>
-<!ELEMENT nom (#PCDATA)>
-<!ELEMENT image (#PCDATA)>
-<!ELEMENT prix (#PCDATA)>
-<!ELEMENT categorie (#PCDATA)>
