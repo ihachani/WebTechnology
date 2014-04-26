@@ -11,8 +11,8 @@ function createSelectFour() {
 		},
 		dataType : 'json',
 		success : function(data) {
-			$.each(function(index, value) {
-				alert(value.name);
+			$.each(data, function(index, value) {
+				alert(value.nom);
 			});
 		},
 		error : function(xhr, desc, err) {
@@ -22,6 +22,25 @@ function createSelectFour() {
 	});
 }
 
+function addFour() {
+	$.ajax({
+		url : 'fournisseur.php',
+		type : 'post',
+		data : {
+			'action' : 'addFourn',
+			'nom' : $('#fourName').val()
+		},
+		dataType : 'text',
+		success : function(data) {
+			alert(data);
+		},
+		error : function(xhr, desc, err) {
+			console.log(xhr);
+			console.log("Details: " + desc + "\nError:" + err);
+		}
+	});
+}
+
 $(function() {
-	createSelectFour();
+	$(document).on('click', '#fourSubmit', addFour);
 });
