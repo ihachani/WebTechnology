@@ -6,15 +6,26 @@
 </head>
 <body>
 	<div>
+		<label>ID du Produit:</label> <input id="prodID" type="text"
+			placeholder="ID du produit">
+	</div>
+	<div>
 		<label>Nom du Produit:</label> <input id="prodName" type="text"
 			placeholder="Nom du produit">
 	</div>
 	<div>
-		<label>Prix du Produit:</label> <input id="prodName" type="text"
-			placeholder="Nom du produit">
+		<label>Prix du Produit:</label> <input id="prodPrix" type="text"
+			placeholder="Prix du produit">
 	</div>
-
-
+	<div>
+		<label>Category:</label> <select id='prodCat'><option
+				value="homme">Homme</option>
+			<option value="femme">Femme</option>
+			<option value="enfant">Enfant</option></select>
+	</div>
+	<div>
+		<label>Fournisseur:</label> <select id='prodFourn'></select>
+	</div>
 	<button id="prodSubmit">Submit</button>
 </body>
 </html>
