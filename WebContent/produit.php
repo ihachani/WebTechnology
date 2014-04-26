@@ -31,4 +31,8 @@ if ($_POST ['action'] == 'addProd') {
 	else
 		echo $_POST ['id'] . " ajouté avec success";
 }
+if ($_POST ['action'] == 'showprod') {
+	$status = $obj->showXmlFile ();
+	echo json_encode ( $status );
+}
 ?>

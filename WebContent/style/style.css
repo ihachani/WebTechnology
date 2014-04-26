@@ -55,3 +55,7 @@ footer {
 	bottom: 0px;
 	right: 5px;
 }
+
+#container {
+	padding-left: 10px;
+}

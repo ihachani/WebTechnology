@@ -1,1 +1,21 @@
-<produits></produits>
+<?xml version="1.0" encoding="UTF-8"?>
+<produits>
+	<produit>
+		<id>z15</id>
+		<nom>T-shirt</nom>
+		<prix>150</prix>
+		<quantite>0</quantite>
+		<category>homme</category>
+		<fournisseur>Ahmed</fournisseur>
+		<image>assets/img.png</image>
+	</produit>
+	<produit>
+		<id>z16</id>
+		<nom>Pants</nom>
+		<prix>150</prix>
+		<quantite>0</quantite>
+		<category>homme</category>
+		<fournisseur>Ahmed</fournisseur>
+		<image>assets/img.png</image>
+	</produit>
+</produits>
