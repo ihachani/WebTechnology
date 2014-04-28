@@ -35,4 +35,12 @@ if ($_POST ['action'] == 'showprod') {
 	$status = $obj->showXmlFile ();
 	echo json_encode ( $status );
 }
+
+if ($_POST ['action'] == 'removeProd') {
+	$status = $obj->removeNode ( $_POST ['id'] );
+	if ($status == false)
+		echo "Problem lors de la suppression de " . $_POST ['id'];
+	else
+		echo $_POST ['id'] . " supprimé avec success";
+}
 ?>

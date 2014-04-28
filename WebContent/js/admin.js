@@ -70,7 +70,68 @@ function addProd() {
 		alert('a field is empty');
 
 }
+function test() {
+	alert($(this).text());
+}
+function removeProd() {
+	$.ajax({
+		url : 'produit.php',
+		type : 'post',
+		data : {
+			'action' : 'removeProd',
+			'id' : $(this).attr('target'),
+		},
+		dataType : 'text',
+		success : function(data) {
+			alert(data);
+			loadGestion();
+		},
+		error : function(xhr, desc, err) {
+			console.log(xhr);
+			console.log("Details: " + desc + "\nError:" + err);
+		}
+	});
+}
+
+function createEditMenu(elem) {
+	retval = $('<div>', {
+		class : 'editMenu',
+		id : elem.attr('target')
+	});
+	retval.append($('<button>', {
+		class : 'editBut',
+	}).text('Nom'));
+	retval.append($('<button>', {
+		class : 'editBut',
+	}).text('Prix'));
+	retval.append($('<button>', {
+		class : 'editBut',
+	}).text('Quantite'));
+	retval.append($('<button>', {
+		class : 'editBut',
+	}).text('Category'));
+	retval.append($('<button>', {
+		class : 'editBut',
+	}).text('Fournisseur'));
+	retval.append($('<button>', {
+		class : 'editBut',
+	}).text('Image'));
+	return retval;
+
+}
+
+function showEditMenu() {
+	menu = createEditMenu($(this));
+	$(this).parent().closest('div').after(menu);
+	menu.hide();
+	menu.show(400);
+}
+/*
+ * I must trait the update case by case.28/04 23:00.Ilyes Hachani
+ */
 $(function() {
 	$(document).on('click', '#fourSubmit', addFour);
 	$(document).on('click', '#prodSubmit', addProd);
+	$(document).on('click', '.supBut', removeProd);
+	$(document).on('click', '.editBut', showEditMenu);
 });

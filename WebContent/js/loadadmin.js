@@ -1,6 +1,7 @@
 /**
  * 
  */
+
 function prodCreateLine() {
 	$.ajax({
 		url : 'produit.php',
@@ -43,6 +44,14 @@ function createLine(item) {
 	retval.append($('<div>', {
 		class : 'tabHead'
 	}).text(item.image));
+	retval.append($('<button>', {
+		class : 'supBut',
+		target : item.id
+	}).text('supprimer'));
+	retval.append($('<button>', {
+		class : 'editBut',
+		target : item.id
+	}).text('modifier'));
 	return retval;
 }
 function createSelectFour() {
