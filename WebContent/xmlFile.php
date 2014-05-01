@@ -184,6 +184,28 @@ class xmlFile {
 		}
 		return $retVal;
 	}
+	public function getNode($id) {
+		$xml = new DOMDocument ();
+		$xml->formatOutput = true;
+		$xml->preserveWhiteSpace = false;
+		$xml->load ( $this->path );
+		$nodes = $xml->getElementsByTagName ( $this->fields [1] );
+		foreach ( $nodes as $node ) {
+			$tmp = $node->getElementsByTagName ( $this->fields [$this->idn] );
+			$tmp = $tmp->item ( 0 )->nodeValue;
+			if ($tmp == $id) {
+				$retval = array ();
+				$retval [$this->fields [0]] = '';
+				$retval [$this->fields [1]] = '';
+				for($i = 2; $i < $this->nb; $i ++) {
+					$tmp1 = $node->getElementsByTagName ( $this->fields [$i] );
+					$retval [$this->fields [$i]] = $tmp1->item ( 0 )->nodeValue;
+				}
+				return $retval;
+			}
+		}
+		return false;
+	}
 }
 
 ?>

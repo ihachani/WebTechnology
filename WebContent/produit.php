@@ -43,4 +43,24 @@ if ($_POST ['action'] == 'removeProd') {
 	else
 		echo $_POST ['id'] . " supprimé avec success";
 }
+
+if ($_POST ['action'] == 'editNom') {
+	$values = $obj->getNode ( $_POST ['id'] );
+	$nValues = array ();
+	$nValues [] = '';
+	$nValues [] = '';
+	$nValues [] = $values ['id'];
+	// $nValues [] = $values ['nom'];
+	$nValues [] = $_POST ['nom'];
+	$nValues [] = $values ['prix'];
+	$nValues [] = $values ['quantite'];
+	$nValues [] = $values ['category'];
+	$nValues [] = $values ['fournisseur'];
+	$nValues [] = $values ['image'];
+	$status = $obj->updateNode ( $nValues, $_POST ['id'] );
+	if ($status == false)
+		echo "Problem lors de la mise a jour de " . $_POST ['id'];
+	else
+		echo " mise a jour de " . $_POST ['id'] . " avec success";
+}
 ?>

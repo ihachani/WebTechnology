@@ -86,6 +86,7 @@ function loadGestion() {
 	$("#container").load("gestion.html", prodCreateLine);
 }
 $(function() {
+	loadGestion();
 	$(document).on('click', '#fournisseur', loadFournAdd);
 	$(document).on('click', '#produit', loadProdAdd);
 	$(document).on('click', '#gestion', loadGestion);
