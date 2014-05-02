@@ -2,7 +2,7 @@
 <produits>
 	<produit>
 		<id>z15</id>
-		<nom>T-shirt</nom>
+		<nom>Coat Men2011</nom>
 		<prix>150</prix>
 		<quantite>0</quantite>
 		<category>homme</category>
@@ -11,11 +11,30 @@
 	</produit>
 	<produit>
 		<id>z16</id>
-		<nom>Pants</nom>
+		<nom>Coat LXZ12013</nom>
 		<prix>150</prix>
 		<quantite>0</quantite>
 		<category>homme</category>
 		<fournisseur>Ahmed</fournisseur>
 		<image>assets/coat.jpeg</image>
+	</produit>
+	<produit>
+		<id>z17</id>
+		<nom>T-shirt</nom>
+		<prix>150</prix>
+		<quantite>0</quantite>
+		<category>homme</category>
+		<fournisseur>Ahmed</fournisseur>
+		<image>assets/T-shirt.png</image>
+	</produit>
+	<produit>
+		<id>f1</id>
+		<nom>Coat-f</nom>
+		<prix>150</prix>
+		<quantite>0</quantite>
+		<category>femme</category>
+		<fournisseur>Ahmed</fournisseur>
+		<image>assets/Motorcycle-Slim-Sheepskin-Leather-O-neck-Collar-Female-Jacket.jpg
+		</image>
 	</produit>
 </produits>

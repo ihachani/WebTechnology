@@ -1,9 +1,7 @@
 @CHARSET "UTF-8";
 
 #main_body_warper {
-	margin-left: 5%;
-	margin-right: 5%;
-	min-width: 50em;
+	min-width: 30em;
 	padding: 10px;
 }
 
