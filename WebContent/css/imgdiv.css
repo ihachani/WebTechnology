@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+
+.imgdiv {
+	position: relative;
+	height: 250px;
+	width: 440px;
+	background: url("../assets/img.png");
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	margin-left: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.filtre {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: inherit;
+	width: inherit;
+	height: inherit;
+	z-index: 50;
+	background: rgba(200, 200, 200, 0.3);
+}
+
+.filtre * {
+	display: inline-block;
+}
+
+.filtre button {
+	position: absolute;
+	right: 0;
+}
+
+.filtre .toolbar {
+	position: absolute;
+	bottom: 0;
+	width: inherit;
+	background: rgba(55, 55, 55, 0.7);
+	z-index: 51;
+}
+
+.toolbar p span {
+	text-decoration: underline;
+	color: silver;
+	font-style: oblique;
+	font: bolder;
+	font-size: large;
+}
+
+.price {
+	position: absolute;
+	right: 50px;
+}
