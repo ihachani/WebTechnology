@@ -122,6 +122,7 @@ function editName() {
 		alert('empty field');
 
 }
+
 function editPrix() {
 	if ($(this).siblings('input').val()) {
 		if (isNaN($(this).siblings('input').val())) {
@@ -133,9 +134,9 @@ function editPrix() {
 				url : 'produit.php',
 				type : 'post',
 				data : {
-					'action' : 'editNom',
+					'action' : 'editPrix',
 					'id' : $(this).parent().closest('div').attr('id'),
-					'nom' : $(this).siblings('input').val(),
+					'prix' : $(this).siblings('input').val(),
 				},
 				dataType : 'text',
 				success : function(data) {
@@ -151,6 +152,81 @@ function editPrix() {
 	} else
 		alert('empty field');
 }
+
+function editQuantite() {
+	if ($(this).siblings('input').val()) {
+		if (isNaN($(this).siblings('input').val())) {
+			alert('Not a number');
+		} else if ($(this).siblings('input').val() < 0) {
+			alert('negative number');
+		} else {
+			$.ajax({
+				url : 'produit.php',
+				type : 'post',
+				data : {
+					'action' : 'editQuantite',
+					'id' : $(this).parent().closest('div').attr('id'),
+					'quantite' : $(this).siblings('input').val(),
+				},
+				dataType : 'text',
+				success : function(data) {
+					alert(data);
+					loadGestion();
+				},
+				error : function(xhr, desc, err) {
+					console.log(xhr);
+					console.log("Details: " + desc + "\nError:" + err);
+				}
+			});
+		}
+	} else
+		alert('empty field');
+}
+
+function editCategory() {
+	$.ajax({
+		url : 'produit.php',
+		type : 'post',
+		data : {
+			'action' : 'editCategory',
+			'id' : $(this).parent().closest('div').attr('id'),
+			'category' : $(this).siblings('select').children('option:selected')
+					.text(),
+		},
+		dataType : 'text',
+		success : function(data) {
+			alert(data);
+			loadGestion();
+		},
+		error : function(xhr, desc, err) {
+			console.log(xhr);
+			console.log("Details: " + desc + "\nError:" + err);
+		}
+	});
+}
+
+function editFournisseur() {
+	$.ajax({
+		url : 'produit.php',
+		type : 'post',
+		data : {
+			'action' : 'editFournisseur',
+			'id' : $(this).parent().closest('div').attr('id'),
+			'fournisseur' : $(this).siblings('select').children(
+					'option:selected').text(),
+		},
+		dataType : 'text',
+		success : function(data) {
+			alert(data);
+			loadGestion();
+		},
+		error : function(xhr, desc, err) {
+			console.log(xhr);
+			console.log("Details: " + desc + "\nError:" + err);
+		}
+	});
+}
+
 function createEditMenu(elem) {
 	retval = $('<div>', {
 		class : 'editMenu',
@@ -204,7 +280,75 @@ function createPrixDiv(id) {
 	}).text('Submit'));
 	return retval;
 }
-
+function createQuantiteDiv(id) {
+	retval = $('<div>', {
+		id : id,
+		class : 'editMenu',
+	});
+	retval.append($('<input>', {
+		type : 'text'
+	}));
+	retval.append($('<button>', {
+		class : 'quantiteSubmit'
+	}).text('Submit'));
+	return retval;
+}
+function createCategoryDiv(id) {
+	retval = $('<div>', {
+		id : id,
+		class : 'editMenu',
+	});
+	retval.append($('<label>').text('Category:'));
+	select = $('<select>');
+	select.append($('<option>', {
+		value : 'homme',
+		text : 'homme'
+	}));
+	select.append($('<option>', {
+		value : 'femme',
+		text : 'femme'
+	}));
+	select.append($('<option>', {
+		value : 'enfant',
+		text : 'enfant'
+	}));
+	retval.append(select);
+	retval.append($('<button>', {
+		class : 'categorySubmit'
+	}).text('Submit'));
+	return retval;
+}
+function createFournisseurDiv(id) {
+	retval = $('<div>', {
+		id : id,
+		class : 'editMenu',
+	});
+	retval.append($('<label>').text('Fournisseur:'));
+	select = $('<select>');
+	$.ajax({
+		url : 'fournisseur.php',
+		type : 'post',
+		data : {
+			'action' : 'showfourn',
+		},
+		dataType : 'json',
+		success : function(data) {
+			$.each(data, function(key, value) {
+				select.append($('<option>').attr("value", value.nom).text(
+						value.nom));
+			});
+		},
+		error : function(xhr, desc, err) {
+			console.log(xhr);
+			console.log("Details: " + desc + "\nError:" + err);
+		}
+	});
+	retval.append(select);
+	retval.append($('<button>', {
+		class : 'fournisseurSubmit'
+	}).text('Submit'));
+	return retval;
+}
 function showNameDiv() {
 	menu = createNameDiv($(this).parent().closest('div').attr('id'));
 	$(this).parent().closest('div').after(menu);
@@ -223,7 +367,35 @@ function showPrixDiv() {
 	menu.show(400);
 }
 
+function showQuantiteDiv() {
+	menu = createQuantiteDiv($(this).parent().closest('div').attr('id'));
+	$(this).parent().closest('div').after(menu);
+	menu.hide();
+	$(this).parent().closest('div').hide(700).remove();
+	// $(this).parent().closest('div');
+	menu.show(400);
+}
+
+function showCategoryDiv() {
+	menu = createCategoryDiv($(this).parent().closest('div').attr('id'));
+	$(this).parent().closest('div').after(menu);
+	menu.hide();
+	$(this).parent().closest('div').hide(700).remove();
+	// $(this).parent().closest('div');
+	menu.show(400);
+}
+
+function showFournisseurDiv() {
+	menu = createFournisseurDiv($(this).parent().closest('div').attr('id'));
+	$(this).parent().closest('div').after(menu);
+	menu.hide();
+	$(this).parent().closest('div').hide(700).remove();
+	// $(this).parent().closest('div');
+	menu.show(400);
+}
+
 function showEditMenu() {
+	$(this).hide(400);
 	menu = createEditMenu($(this));
 	$(this).parent().closest('div').after(menu);
 	menu.hide();
@@ -242,4 +414,10 @@ $(function() {
 	$(document).on('click', '.nameSubmit', editName);
 	$(document).on('click', '.editPrixBut', showPrixDiv);
 	$(document).on('click', '.prixSubmit', editPrix);
+	$(document).on('click', '.editQuantiteBut', showQuantiteDiv);
+	$(document).on('click', '.quantiteSubmit', editQuantite);
+	$(document).on('click', '.editCategoryBut', showCategoryDiv);
+	$(document).on('click', '.categorySubmit', editCategory);
+	$(document).on('click', '.editFournisseurBut', showFournisseurDiv);
+	$(document).on('click', '.fournisseurSubmit', editFournisseur);
 });

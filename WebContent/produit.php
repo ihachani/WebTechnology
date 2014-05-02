@@ -63,4 +63,80 @@ if ($_POST ['action'] == 'editNom') {
 	else
 		echo " mise a jour de " . $_POST ['id'] . " avec success";
 }
+if ($_POST ['action'] == 'editPrix') {
+	$values = $obj->getNode ( $_POST ['id'] );
+	$nValues = array ();
+	$nValues [] = '';
+	$nValues [] = '';
+	$nValues [] = $values ['id'];
+	$nValues [] = $values ['nom'];
+	$nValues [] = $_POST ['prix'];
+	// $nValues [] = $values ['prix'];
+	$nValues [] = $values ['quantite'];
+	$nValues [] = $values ['category'];
+	$nValues [] = $values ['fournisseur'];
+	$nValues [] = $values ['image'];
+	$status = $obj->updateNode ( $nValues, $_POST ['id'] );
+	if ($status == false)
+		echo "Problem lors de la mise a jour de " . $_POST ['id'];
+	else
+		echo " mise a jour de " . $_POST ['id'] . " avec success";
+}
+if ($_POST ['action'] == 'editQuantite') {
+	$values = $obj->getNode ( $_POST ['id'] );
+	$nValues = array ();
+	$nValues [] = '';
+	$nValues [] = '';
+	$nValues [] = $values ['id'];
+	$nValues [] = $values ['nom'];
+	$nValues [] = $values ['prix'];
+	// $nValues [] = $values ['quantite'];
+	$nValues [] = $_POST ['quantite'];
+	$nValues [] = $values ['category'];
+	$nValues [] = $values ['fournisseur'];
+	$nValues [] = $values ['image'];
+	$status = $obj->updateNode ( $nValues, $_POST ['id'] );
+	if ($status == false)
+		echo "Problem lors de la mise a jour de " . $_POST ['id'];
+	else
+		echo " mise a jour de " . $_POST ['id'] . " avec success";
+}
+if ($_POST ['action'] == 'editCategory') {
+	$values = $obj->getNode ( $_POST ['id'] );
+	$nValues = array ();
+	$nValues [] = '';
+	$nValues [] = '';
+	$nValues [] = $values ['id'];
+	$nValues [] = $values ['nom'];
+	$nValues [] = $values ['prix'];
+	$nValues [] = $values ['quantite'];
+	$nValues [] = $_POST ['category'];
+	// $nValues [] = $values ['category'];
+	$nValues [] = $values ['fournisseur'];
+	$nValues [] = $values ['image'];
+	$status = $obj->updateNode ( $nValues, $_POST ['id'] );
+	if ($status == false)
+		echo "Problem lors de la mise a jour de " . $_POST ['id'];
+	else
+		echo " mise a jour de " . $_POST ['id'] . " avec success";
+}
+if ($_POST ['action'] == 'editFournisseur') {
+	$values = $obj->getNode ( $_POST ['id'] );
+	$nValues = array ();
+	$nValues [] = '';
+	$nValues [] = '';
+	$nValues [] = $values ['id'];
+	$nValues [] = $values ['nom'];
+	$nValues [] = $values ['prix'];
+	$nValues [] = $values ['quantite'];
+	$nValues [] = $values ['category'];
+	$nValues [] = $_POST ['fournisseur'];
+	// $nValues [] = $values ['fournisseur'];
+	$nValues [] = $values ['image'];
+	$status = $obj->updateNode ( $nValues, $_POST ['id'] );
+	if ($status == false)
+		echo "Problem lors de la mise a jour de " . $_POST ['id'];
+	else
+		echo " mise a jour de " . $_POST ['id'] . " avec success";
+}
 ?>
