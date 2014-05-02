@@ -7,7 +7,7 @@
 		<quantite>0</quantite>
 		<category>homme</category>
 		<fournisseur>Ahmed</fournisseur>
-		<image>assets/img.png</image>
+		<image>assets/coat2.jpeg</image>
 	</produit>
 	<produit>
 		<id>z16</id>
@@ -16,6 +16,6 @@
 		<quantite>0</quantite>
 		<category>homme</category>
 		<fournisseur>Ahmed</fournisseur>
-		<image>assets/img.png</image>
+		<image>assets/coat.jpeg</image>
 	</produit>
 </produits>
