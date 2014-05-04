@@ -37,4 +37,42 @@
 		<image>assets/Motorcycle-Slim-Sheepskin-Leather-O-neck-Collar-Female-Jacket.jpg
 		</image>
 	</produit>
+	<produit>
+		<id>f2</id>
+		<nom>Express Skirts</nom>
+		<prix>50</prix>
+		<quantite>10</quantite>
+		<category>femme</category>
+		<fournisseur>Ahmed</fournisseur>
+		<image>assets/Hot-Selling-6-Colors-Womens-Asymmetrical-HemChiffon-Irregular-Chiffon-Irregular-Pleated-Long-Maxi-Dance-Skirts-Free.jpg
+		</image>
+	</produit>
+
+	<produit>
+		<id>P1</id>
+		<nom>JT FX Pants</nom>
+		<prix>50</prix>
+		<quantite>10</quantite>
+		<category>homme</category>
+		<fournisseur>Ahmed</fournisseur>
+		<image>assets/68592_JT_FX_Pants.jpg</image>
+	</produit>
+	<produit>
+		<id>SH1</id>
+		<nom>Shoes men</nom>
+		<prix>150</prix>
+		<quantite>10</quantite>
+		<category>homme</category>
+		<fournisseur>Ahmed</fournisseur>
+		<image>assets/shoes-men.jpeg</image>
+	</produit>
+	<produit>
+		<id>SF1</id>
+		<nom>Heroine Shoes</nom>
+		<prix>150</prix>
+		<quantite>10</quantite>
+		<category>homme</category>
+		<fournisseur>Ahmed</fournisseur>
+		<image>assets/heroine-shoes.jpeg</image>
+	</produit>
 </produits>
